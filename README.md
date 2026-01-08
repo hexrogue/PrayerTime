@@ -12,13 +12,13 @@ This application allows users to find prayer times for various districts in Mala
 
 ## Key Features
 
-- *Offline First*: No internet connection required; calculations are done locally.
+- **Offline First**: No internet connection required; calculations are done locally.
 
-- *Interactive TUI*: Navigate through states and cities using your keyboard.
+- **Interactive TUI**: Navigate through states and cities using your keyboard.
 
-- *Coordinate-Based*: Uses mathematical formulas to derive prayer times based on Latitude and Longitude.
+- **Coordinate-Based**: Uses mathematical formulas to derive prayer times based on Latitude and Longitude.
 
-- *Built-in Zone Data*: Includes a `zones.db` containing coordinates for districts across Malaysia.
+- **Built-in Zone Data**: Includes a `zones.db` containing coordinates for districts across Malaysia.
 
 ---
 
@@ -34,24 +34,39 @@ To ensure reliability during development, the calculation logic was validated ag
 
 ## Disclaimer
 
-*Not for Production Use*. This project was created for *portfolio and educational purposes*. While the mathematical formulas are robust, subtle differences in atmospheric pressure, elevation, and regional criteria might result in slight discrepancies compared to official sources.
+**Not for Production Use**. This project was created for **portfolio and educational purposes**. While the mathematical formulas are robust, subtle differences in atmospheric pressure, elevation, and regional criteria might result in slight discrepancies compared to official sources.
 
 For accurate and official prayer times in Malaysia, please refer to:
 
-- *Official Website*: [e-solat.gov.my](https://www.e-solat.gov.my)
-- *API*: For production-grade applications, it is highly recommended to use the API provided by JAKIM at the e-solat portal.
+- **Official Website**: [e-solat.gov.my](https://www.e-solat.gov.my)
+- **API**: For production-grade applications, it is highly recommended to use the API provided by JAKIM at the e-solat portal.
+
+---
+
+## Database Setup
+
+This application requires a SQLite database named `zones.db` containing coordinates for Malaysian districts.
+
+1. **Source**: You can obtain or generate the database from this repository: [hexrogue/city2coordinates](https://github.com/hexrogue/city2coordinates).
+
+2. **Setup**: Copy the generated zones.db file and paste it into the root directory of this project.
+
+```bash
+# Example
+cp path/to/city2coordinates/zones.db ./PrayerTime
+```
 
 ---
 
 ## Tech Stack
 
-- *Language*: Go (Golang)
+- **Language**: Go (Golang)
 
-- *TUI Framework*: [Charmbracelet Bubble Tea](https://github.com/charmbracelet/bubbletea)
+- **TUI Framework**: [Charmbracelet Bubble Tea](https://github.com/charmbracelet/bubbletea)
 
-- *Database*: SQLite3 (for zone and coordinate storage)
+- **Database**: SQLite3 (for zone and coordinate storage)
 
-- Math: Standard `math` library for trigonometric astronomical functions.
+- **Math**: Standard `math` library for trigonometric astronomical functions.
 
 ---
 
