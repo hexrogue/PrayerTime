@@ -1,5 +1,7 @@
 # PrayerTime TUI
 
+![Demo](assets/demo.gif)
+
 A terminal-based prayer time calculator for Malaysia, built with Go and the Bubble Tea framework. This project demonstrates astronomical coordinate-based calculations and a clean Terminal User Interface (TUI).
 
 ---
